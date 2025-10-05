@@ -1,6 +1,18 @@
 import { ExternalLink, Github } from 'lucide-react';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  company?: string;
+  role?: string;
+  github?: string;
+  demo?: string;
+  website?: string;
+}
+
+const projects: Project[] = [
   {
     title: 'StoryMe Platform',
     description: 'Leading the development of a platform for building responsive, story-driven websites. Engineered advanced DOM manipulation with JSON-to-DOM and DOM-to-JSON conversions.',
@@ -8,6 +20,7 @@ const projects = [
     tags: ['Next.js', 'Redux', 'Redux Saga', 'MUI', 'TypeScript'],
     company: 'StoryMe LTD',
     role: 'Frontend Team Lead',
+    website: 'https://storyme.design/',
   },
   {
     title: 'Ninja Van Internal Projects',
@@ -16,6 +29,7 @@ const projects = [
     tags: ['React', 'Next.js', 'Go', 'Design System'],
     company: 'Ninja Van',
     role: 'Senior Software Engineer',
+    website: 'https://www.ninjavan.co/',
   },
   {
     title: 'Extra Cash App',
@@ -31,6 +45,7 @@ const projects = [
     tags: ['Angular', 'Spring Boot', 'TypeScript'],
     company: 'Apple Inc.',
     role: 'Frontend Engineer',
+    website: 'https://www.apple.com/',
   },
   {
     title: 'IOHealth Platform',
@@ -38,6 +53,7 @@ const projects = [
     image: 'https://images.pexels.com/photos/4167542/pexels-photo-4167542.jpeg?auto=compress&cs=tinysrgb&w=800',
     tags: ['React Native', 'Healthcare', 'WebRTC'],
     role: 'Freelance',
+    website: 'https://iohealth.com/',
   },
   {
     title: 'Restaurant365 Platform',
@@ -46,6 +62,7 @@ const projects = [
     tags: ['React', 'WebSockets', 'Scrum'],
     company: 'Restaurant365',
     role: 'Frontend Engineer',
+    website: 'https://www.restaurant365.com/',
   },
 ];
 
@@ -133,7 +150,18 @@ export default function Projects() {
                         className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
                       >
                         <ExternalLink className="w-5 h-5" />
-                        <span className="text-sm">View</span>
+                        <span className="text-sm">Demo</span>
+                      </a>
+                    )}
+                    {project.website && (
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-slate-400 hover:text-green-400 transition-colors"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                        <span className="text-sm">Website</span>
                       </a>
                     )}
                   </div>
