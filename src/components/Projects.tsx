@@ -14,6 +14,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Upwork Outcomes Platform',
+    description: 'Building core pages for Upwork Outcomes, a new results-driven service offering. Collaborating with global cross-functional teams to deliver features aligned with business outcomes. Maintained strong test coverage with unit tests (Vitest) and E2E tests (Cypress).',
+    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['Nuxt 3', 'Vue.js', 'Vitest', 'Cypress', 'CI/CD', 'Figma'],
+    company: 'Upwork',
+    role: 'Senior Frontend Engineer',
+    website: 'https://www.upwork.com/',
+  },
+  {
     title: 'StoryMe Platform',
     description: 'Leading the development of a platform for building responsive, story-driven websites. Engineered advanced DOM manipulation with JSON-to-DOM and DOM-to-JSON conversions.',
     image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
